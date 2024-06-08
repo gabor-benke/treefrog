@@ -1,0 +1,243 @@
+/* App.js */
+
+.logo-title {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  background-color: black;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  height: 100px;
+}
+
+.title {
+  font-family: "Amatic SC", sans-serif;
+  color: rgb(27, 227, 60);
+  font-size: 4.5rem;
+}
+
+.main {
+  height: 1300px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url('../src/components/img/background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.lets-see {
+  font-family: "Lexend", sans-serif;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 130px;
+}
+
+/* Searchbar.js */
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin-top: 30px;
+}
+
+.searchbar-input[placeholder="Search for a city..."] {
+  display: flex;
+  align-content: center;
+  margin: 24px;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+}
+
+.searchbar-button {
+  margin: 24px;
+  background-color: rgb(27, 227, 60);
+  color: black;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.25em;
+  border: 2px solid rgb(27, 227, 60);
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchbar-button:hover {
+  background-color: rgb(64, 253, 96);
+  border: 2px solid rgb(64, 253, 96);
+}
+
+/* Dashboard.js */
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  font-family: "Lexend", sans-serif;
+}
+
+.result-location, 
+.loading {
+  font-size: 3.5em;
+  color: white;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  margin-left: 3px;
+  animation: bounce 1.5s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+}
+
+.current-weather,
+.five-day-forecast {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px 0 150px;
+}
+
+.current-weather h3,
+.five-day-forecast h3 {
+  font-size: 2.5em;
+  color: rgb(27, 227, 60)
+}
+
+.current-weather p,
+.five-day-forecast p {
+  font-size: 1.75em;
+  color: white;
+  margin: 0;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 790px) and (max-width: 1235px) {
+  
+  /* Dashboard.js */
+
+  .result-location, 
+  .loading {
+    font-size: 3em;
+  }
+
+  .current-weather,
+  .five-day-forecast {
+    margin-left: 100px;
+  }
+
+  .current-weather h3,
+  .five-day-forecast h3 {
+    font-size: 1.75em;
+  }
+
+  .current-weather p,
+  .five-day-forecast p {
+    font-size: 1.75em;
+  }
+
+}
+
+@media only screen and (min-width: 200px) and (max-width: 790px) {
+  
+  /* App.js */
+
+  .logo {
+    height: 80px;
+  }
+  
+  .title {
+    font-size: 3.75rem;
+  }
+
+  .lets-see {
+    font-size: 1.3em;
+    padding-top: 120px;
+  }
+
+  /* Searchbar.js */
+
+  .searchbar {
+    margin-top: 20px;
+  }
+
+  /* Dashboard.js */
+  
+  .result-location, 
+  .loading {
+    font-size: 2.5em;
+  }
+  
+  .current-weather,
+  .five-day-forecast {
+    margin-left: 50px;
+  }
+  
+  .current-weather h3,
+  .five-day-forecast h3 {
+    font-size: 1.5em;
+  }
+  
+  .current-weather p,
+  .five-day-forecast p {
+    font-size: 1.25em;
+  }
+
+}
+
+/* Font Faces */
+
+@font-face {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./components/fonts/AmaticSC-Regular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./components/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./components/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
